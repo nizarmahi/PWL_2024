@@ -69,3 +69,12 @@ Route::get('/articles/{id}', [ArticleController::class,'index']);
 // Route::resource('photos', PhotoController::class);
 Route::resource('photos', PhotoController::class)->only([ 'index', 'show']);
 Route::resource('photos', PhotoController::class)->except([ 'create', 'store', 'update', 'destroy']);
+
+// Praktikum 1 View
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Mahi']);
+// });
+
+// Praktikum 2 View dari Controller
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+    
